@@ -1,0 +1,29 @@
+<div class="container">
+    <header>
+      <h1>AI Code Tester</h1>
+    </header>
+  
+    <div class="input-container">
+      <div class="input-group">
+        <label for="codeInput">Enter Code:</label>
+        <textarea id="codeInput" [(ngModel)]="codeInput" placeholder="Enter code here..."></textarea>
+      </div>
+      <div class="input-group">
+        <label for="testInput">Enter Tests:</label>
+        <textarea id="testInput" [(ngModel)]="testInput" placeholder="Enter tests here..."></textarea>
+      </div>
+    </div>
+  
+    <button (click)="processCode()">Process Code</button>
+  
+    <div *ngIf="isLoading" class="loading-indicator">
+        Processing, please wait...
+      </div>
+      
+      <!-- Output textarea -->
+      <div class="output-group">
+        <label for="codeOutput">Output:</label>
+        <textarea id="codeOutput" [(ngModel)]="codeOutput" placeholder="Output will appear here..."></textarea>
+      </div>
+  </div>
+  

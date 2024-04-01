@@ -13,6 +13,16 @@
         <textarea id="testInput" [(ngModel)]="testInput" placeholder="Enter tests here..."></textarea>
       </div>
     </div>
+
+    <!-- Before the Process Code button -->
+    <div class="input-group">
+      <label for="apiSelect">Choose API:</label>
+      <select id="apiSelect" [(ngModel)]="selectedApi">
+        <option value="openai">OpenAI</option>
+        <option value="codelama">Code Llama</option>
+      </select>
+    </div>
+
   
     <button (click)="processCode()">Process Code</button>
   
